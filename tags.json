@@ -1,0 +1,62 @@
+{
+  "tags": [
+    {
+      "id": "1",
+      "name": "auto"
+    },
+    {
+      "id": "2",
+      "name": "finance"
+    },
+    {
+      "id": "3",
+      "name": "marketing"
+    },
+    {
+      "id": "4",
+      "name": "development"
+    },
+    {
+      "id": "5",
+      "name": "sales"
+    },
+    {
+      "id": "6",
+      "name": "new business"
+    },
+    {
+      "id": "7",
+      "name": "customer success"
+    },
+    {
+      "id": "8",
+      "name": "website"
+    },
+    {
+      "id": "9",
+      "name": "nested"
+    },
+    {
+      "id": "10",
+      "name": "transporeon"
+    }
+  ],
+  "mappings": [
+    {
+      "workflowId": "1012",
+      "tagId": 9
+    },
+    {
+      "workflowId": "1012",
+      "tagId": 10
+    },
+    {
+      "workflowId": "1037",
+      "tagId": 4
+    },
+    {
+      "workflowId": "1039",
+      "tagId": 2
+    }
+  ]
+}

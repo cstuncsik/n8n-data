@@ -1,0 +1,52 @@
+{
+  "active": false,
+  "id": "1030",
+  "name": "My workflow 6",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "43857a1b-e1d1-4511-9f63-0691d004e167",
+        "options": {}
+      },
+      "id": "ec786b26-f819-41c5-a369-dff788ca5a14",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        500,
+        580
+      ],
+      "webhookId": "43857a1b-e1d1-4511-9f63-0691d004e167"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "f56f9ef6-5296-4c33-a1c4-7cd7625d9e1b",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        720,
+        580
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "triggerCount": 0,
+  "owner": "csaba@n8n.io",
+  "versionId": "7baff0d1-8503-4b9e-a58a-a654f7f2be51"
+}
