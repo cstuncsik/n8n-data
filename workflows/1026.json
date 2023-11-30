@@ -1,5 +1,4 @@
 {
-  "active": false,
   "id": "1026",
   "name": "Pinned data",
   "nodes": [
@@ -16,37 +15,37 @@
     },
     {
       "parameters": {
-        "operation": "getAllPeople"
+        "url": "https://api.json-generator.com/templates/ATdzNisiKHOB/data",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
       },
-      "id": "9c8ea415-2b61-4f46-b021-1fd2fbbdacbb",
-      "name": "Customer Datastore (n8n training)",
-      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
-      "typeVersion": 1,
+      "id": "58838d44-19e6-4854-a4c1-61b8403901e3",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
       "position": [
-        840,
+        800,
         740
-      ]
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "15",
+          "name": "JSON generator token"
+        }
+      }
     },
     {
       "parameters": {
-        "keepOnlySet": true,
-        "values": {
-          "string": [
-            {
-              "name": "nameCountry",
-              "value": "={{ $json.name }} {{ $json.country }}"
-            }
-          ]
-        },
-        "options": {}
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.json = 1;\n  item.json.newProp = { json: 2 };\n}\n\nreturn $input.all();"
       },
-      "id": "384f6aad-2fac-4f76-afac-f02ea5a4d285",
-      "name": "Set",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 2,
+      "id": "ed67c87f-fce1-435b-8526-82e36683ee0b",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
       "position": [
-        1060,
-        740
+        800,
+        1040
       ]
     }
   ],
@@ -55,18 +54,18 @@
       "main": [
         [
           {
-            "node": "Customer Datastore (n8n training)",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Customer Datastore (n8n training)": {
+    "HTTP Request": {
       "main": [
         [
           {
-            "node": "Set",
+            "node": "Code",
             "type": "main",
             "index": 0
           }
@@ -79,6 +78,6 @@
     "callerPolicy": "workflowsFromSameOwner"
   },
   "triggerCount": 1,
-  "owner": "csaba@n8n.io",
-  "versionId": "7ee98739-6e8b-40d2-b4be-e2730da61ad1"
+  "versionId": "d4718d4b-7f7b-4049-8e3a-4aa52a4925e1",
+  "owner": "csaba@n8n.io"
 }

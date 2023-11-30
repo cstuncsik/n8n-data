@@ -1,0 +1,27 @@
+{
+  "id": "7SlgSITcukedjhwy",
+  "name": "Unnamed credential by member",
+  "type": "httpBasicAuth",
+  "data": {
+    "user": "",
+    "password": ""
+  },
+  "nodesAccess": [
+    {
+      "nodeType": "n8n-nodes-base.graphql",
+      "date": "2023-11-27T16:31:17.997Z"
+    },
+    {
+      "nodeType": "n8n-nodes-base.pipedriveTrigger",
+      "date": "2023-11-27T16:31:17.997Z"
+    },
+    {
+      "nodeType": "n8n-nodes-base.wait",
+      "date": "2023-11-27T16:31:17.997Z"
+    },
+    {
+      "nodeType": "n8n-nodes-base.webhook",
+      "date": "2023-11-27T16:31:17.997Z"
+    }
+  ]
+}
